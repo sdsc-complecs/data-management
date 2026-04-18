@@ -55,3 +55,5 @@ NSF award 2320934.
 - https://docs.globus.org/guides/
 - https://docs.globus.org/guides/tutorials/manage-files/transfer-files/
 - https://www.globus.org/blog/use-test-endpoints-anticipate-your-data-transfer-rates
+- https://fasterdata.es.net/data-transfer-tools/globus/
+- https://fasterdata.es.net/performance-testing/DTNs/
