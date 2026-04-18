@@ -31,7 +31,8 @@ NSF award 2320934.
 - https://ubuntu.com/tutorials
 - https://www.digitalocean.com/community/tutorials
 - https://linuxjourney.com
-- https://linuxcommand.org/
+- https://linuxcommand.org
+- https://ryanstutorials.net
 -
 - https://www.digitalocean.com/community/tutorials/how-to-use-wget-to-download-files-and-interact-with-rest-apis
 - https://linuxize.com/post/wget-command-examples/
