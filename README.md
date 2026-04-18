@@ -27,6 +27,12 @@ NSF award 2320934.
 # Acknowledgements
 
 # References:
+- https://www.hpc-carpentry.org
+- https://ubuntu.com/tutorials
+- https://www.digitalocean.com/community/tutorials
+- https://linuxjourney.com
+- https://linuxcommand.org/
+-
 - https://www.digitalocean.com/community/tutorials/how-to-use-wget-to-download-files-and-interact-with-rest-apis
 - https://linuxize.com/post/wget-command-examples/
 - https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl
