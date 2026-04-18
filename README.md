@@ -27,4 +27,5 @@ NSF award 2320934.
 # Acknowledgements
 
 # References:
+- https://www.digitalocean.com/community/tutorials/how-to-use-wget-to-download-files-and-interact-with-rest-apis
 - https://www.hpc-carpentry.org
