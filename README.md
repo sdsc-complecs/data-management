@@ -28,6 +28,7 @@ NSF award 2320934.
 
 # References:
 - https://www.digitalocean.com/community/tutorials/how-to-use-wget-to-download-files-and-interact-with-rest-apis
+- https://linuxize.com/post/wget-command-examples/
 - https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl
 - https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/
 - https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
