@@ -31,6 +31,7 @@ NSF award 2320934.
 - https://linuxize.com/post/wget-command-examples/
 - https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl
 - https://linuxize.com/post/curl-command-examples/
+- https://www.digitalocean.com/community/cheatsheets/how-to-use-git-a-reference-guide
 - https://linuxize.com/post/git-clone-command/
 - https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/
 - https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
