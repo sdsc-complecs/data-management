@@ -47,6 +47,7 @@ NSF award 2320934.
 - https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files/
 - https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories
 - https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/
+- https://linuxize.com/post/how-to-transfer-files-with-rsync-over-ssh/
   
 - https://www.hpc-carpentry.org
 - https://swcarpentry.github.io/shell-novice/
