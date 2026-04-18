@@ -46,6 +46,8 @@ NSF award 2320934.
 - https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server
 - https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files/
 - https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories
+- https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/
+  
 - https://www.hpc-carpentry.org
 - https://swcarpentry.github.io/shell-novice/
 - https://carpentries-incubator.github.io/hpc-intro/
