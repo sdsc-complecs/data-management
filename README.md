@@ -34,6 +34,7 @@ NSF award 2320934.
 - https://linuxcommand.org
 - https://ryanstutorials.net
 -
+- https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/
 - https://www.digitalocean.com/community/tutorials/how-to-use-wget-to-download-files-and-interact-with-rest-apis
 - https://linuxize.com/post/wget-command-examples/
 - https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl
