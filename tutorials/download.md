@@ -73,7 +73,7 @@ complecs  containers  data  projects  scripts  software
 [mkandes@login02 ~]$
 ```
 
-Change your [`pwd`](https://en.wikipedia.org/wiki/Pwd) to the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)).
+Then navigate into the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)) to make it your [`pwd`](https://en.wikipedia.org/wiki/Pwd).
 
 *Command*
 ```
