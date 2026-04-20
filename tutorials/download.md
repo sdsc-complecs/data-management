@@ -121,3 +121,5 @@ total 177M
 -rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 test_batch
 [mkandes_test@login02]~%
 ```
+
+What type of files are these? Let's check the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) website again. See [Pickle](https://en.wikipedia.org/wiki/Serialization#Pickle). 
