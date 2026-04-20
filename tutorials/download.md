@@ -66,6 +66,8 @@ drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
 [mkandes@login02 complecs]$
 ```
 
+Check that the directory was created by listing the contents of your `$HOME` directory with the [`ls`](https://en.wikipedia.org/wiki/Ls) command. 
+
 Then change your [`pwd`](https://en.wikipedia.org/wiki/Pwd) to the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)).
 
 # Download a Tarball and Extract the Files
