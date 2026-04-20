@@ -46,5 +46,6 @@ Last login: Sun Apr 19 15:30:14 2026 from 216.15.51.171
 [mkandes@login02 ~]$
 ```
 
-## Download Dataset
+## Clone the Dataset
 
+Once logged, go ahead and try to clone this GitHub repository that contains a copy of the CIFAR-10 dataset. However, please be prepared to **cancel** the download. 
