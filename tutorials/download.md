@@ -202,21 +202,23 @@ Next, save the computed hash for the dataset as a file.
 
 *Command*
 ```
-md5sum cifar-10-python.tar.gz > cifar-10-python.md5
+md5sum cifar-10-python.tar.gz > cifar-10-python.tar.gz.md5
 ```
 
 *Output*
 ```
-[mkandes_test@login02]~% md5sum cifar-10-python.tar.gz > cifar-10-python.md5
-[mkandes_test@login02]~% ls -lh
-total 163M
-drwxr-xr-x 2 mkandes_test ddp386   10 Jun  4  2009 cifar-10-batches-py
--rw-r--r-- 1 mkandes_test ddp386   57 Apr 20 10:39 cifar-10-python.md5
--rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
-[mkandes_test@login02]~% cat cifar-10-python.md5 
-c58f30108f718f92721af3b95e74349a  cifar-10-python.tar.gz
-[mkandes_test@login02]~%
+[mkandes@login02 complecs]$ md5sum cifar-10-python.tar.gz > cifar-10-python.tar.gz.md5
+[mkandes@login02 complecs]$ ls -lahtr
+total 164M
+drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
+-rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+drwxr-x--- 29 mkandes use300   46 Apr 20 15:28 ..
+drwxr-xr-x  3 mkandes use300    5 Apr 20  2026 .
+-rw-r--r--  1 mkandes use300   57 Apr 20  2026 cifar-10-python.tar.gz.md5
+[mkandes@login02 complecs]$
 ```
+
+Inspect the contents of the new md5 hash file with the [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) command. 
 
 Now, use the hash file to check the integrity of the dataset again. 
 
