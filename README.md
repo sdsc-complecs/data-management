@@ -18,7 +18,8 @@ Proper data management is essential to make effective use of high-performance co
 
 ## Additional References
 
-- 
+- [COMPLECS: Data Transfer (2026)](https://www.youtube.com/watch?v=sz4zoTWzxss)
+- [COMPLECS: Data Storage and Filesystems](https://www.youtube.com/watch?v=-zo5yK2VKcg)
 - [SDSC Webinar: Data Management & File Systems (2023)](https://www.youtube.com/watch?v=husT8bcrpSI)
 - [Expanse Webinar: Data Management & File Systems on Expanse (2021)](https://www.youtube.com/watch?v=6mljCITo6Gk)
 
