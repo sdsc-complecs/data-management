@@ -14,6 +14,7 @@ Proper data management is essential to make effective use of high-performance co
 ## Tutorials
 
 - [CIFAR through the tubes: Downloading data from the internet](tutorials/download.md)
+- [More files, more problems: Advantages and limitations of different filesystems](tutorials/filesystem.md)
 - 
 
 ## Additional References
