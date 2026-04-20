@@ -67,10 +67,9 @@ drwxr-xr-x  3 mkandes use300    6 Apr 20 16:04 .
 [mkandes@login02 complecs]$
 ```
 
+## Clone the Dataset to Your Working Directory
 
-## Clone the Dataset
-
-Once logged in, go ahead and try to clone this [GitHub repository](https://github.com/YoongiKim/CIFAR-10-images.git) that contains a copy of the CIFAR-10 dataset to your working directory. Note, however, please be prepared to **cancel** the download. To cancel a running command in Bash, use `Ctrl+C`. 
+Once logged in, go ahead and try to clone this [GitHub repository](https://github.com/YoongiKim/CIFAR-10-images.git) that contains a copy of the CIFAR-10 dataset to your working directory. Note, however, please be prepared to **cancel** the download. 
 
 *Command*
 ```
@@ -88,13 +87,47 @@ Resolving deltas: 100% (59990/59990), done.
 Updating files:  15% (9003/60001)
 ```
 
-If you have not done so already, please **cancel** your `git clone` command. It'll take far too long for all of us to download this version of the dataset. How long? 
-Well, here is one measurement using the [`time`](https://en.wikipedia.org/wiki/Time_(Unix)) command.
+If you have not done so already, please **cancel** your `git clone` command.
 
 *Command*
 ```
+Ctrl+C
 ```
 
 *Output*
 ```
+[mkandes@login02 complecs]$ git clone https://github.com/YoongiKim/CIFAR-10-images.git
+Cloning into 'CIFAR-10-images'...
+remote: Enumerating objects: 60027, done.
+remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
+Receiving objects: 100% (60027/60027), 19.94 MiB | 38.24 MiB/s, done.
+Resolving deltas: 100% (59990/59990), done.
+^Cwarning: Clone succeeded, but checkout failed.
+You can inspect what was checked out with 'git status'
+and retry with 'git restore --source=HEAD :/'
+
+
+[mkandes@login02 complecs]$
+```
+
+Unfortunately, it'll take far too long for all of us to download this version of the dataset. How long?  Well, here is one measurement using the [`time`](https://en.wikipedia.org/wiki/Time_(Unix)) command.
+
+*Command*
+```
+time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+```
+
+*Output*
+```
+```
+
+Why does it take so much time?
+
+## Clone the Dataset to Your Scratch Directory
+
+Before we answer the question above, let's try and clone the dataset to an alternative location on Expanse. To make your life simpler, first append the following alias command to your ~/.bashrc file.
+
+*Command*
+```
+alias start-interactive='srun --partition=shared --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 ```
