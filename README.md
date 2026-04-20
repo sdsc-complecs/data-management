@@ -4,12 +4,17 @@
 
 [Image Credit: Harvard Biomedical Data Management](https://datamanagement.hms.harvard.edu)
 
+Proper data management is essential to make effective use of high-performance computing (HPC) systems and other advanced cyberinfrastructure (CI) resources. This session will cover an overview of filesystems, data compression, archives (tar files), checksums and MD5 digests, downloading data using wget and curl, data transfer and long-term storage solutions.
+
 ## Presentation Slides
 
 - [Data Transfer](https://drive.google.com/file/d/1zIe-3jDnuBlCZtFjE1USsC1kWGYheUO5/view?usp=drive_link)
 - [Data Storage and Filesystem](https://drive.google.com/file/d/1cs7Cvvcb_InfLvNWD0KdXI-q-cMZWp6N/view?usp=drive_link)
 
-## Tutorial Exercises
+## Tutorials
+
+- [CIFAR through the tubes: Downloading data from the internet](tutorials/download.md)
+- 
 
 ## Additional References
 
