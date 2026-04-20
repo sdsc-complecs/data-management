@@ -70,4 +70,31 @@ drwxr-xr-x  3 mkandes use300    6 Apr 20 16:04 .
 
 ## Clone the Dataset
 
-Once logged, go ahead and try to clone this GitHub repository that contains a copy of the CIFAR-10 dataset. However, please be prepared to **cancel** the download. 
+Once logged in, go ahead and try to clone this [GitHub repository](https://github.com/YoongiKim/CIFAR-10-images.git) that contains a copy of the CIFAR-10 dataset to your working directory. Note, however, please be prepared to **cancel** the download. To cancel a running command in Bash, use `Ctrl+C`. 
+
+*Command*
+```
+git clone https://github.com/YoongiKim/CIFAR-10-images.git
+```
+
+*Output*
+```
+[mkandes@login02 complecs]$ git clone https://github.com/YoongiKim/CIFAR-10-images.git
+Cloning into 'CIFAR-10-images'...
+remote: Enumerating objects: 60027, done.
+remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
+Receiving objects: 100% (60027/60027), 19.94 MiB | 38.24 MiB/s, done.
+Resolving deltas: 100% (59990/59990), done.
+Updating files:  15% (9003/60001)
+```
+
+If you have not done so already, please **cancel** your `git clone` command. It'll take far too long for all of us to download this version of the dataset. How long? 
+Well, here is one measurement using the [`time`](https://en.wikipedia.org/wiki/Time_(Unix)) command.
+
+*Command*
+```
+```
+
+*Output*
+```
+```
