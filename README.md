@@ -1,7 +1,5 @@
 # Data Management
 
-*Data has a lifecycle. Data management is a lifestyle.*
-
 <img src='https://datamanagement.hms.harvard.edu/sites/g/files/mcu941/files/assets/Images/Lifecycle-wheel-2tier.png' width='50%' height='50%'/>
 
 [Image Credit: Harvard Biomedical Data Management](https://datamanagement.hms.harvard.edu)
