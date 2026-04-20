@@ -12,13 +12,13 @@ Let's get started by logging into Expanse with your account either directly via 
 
 *Command*
 ```
-ssh username@login.expanse.sdsc.edu
+ssh <username>@login.expanse.sdsc.edu
 ```
 
 *Output*
 ```
 mkandes@hardtack:~$ ssh mkandes@login.expanse.sdsc.edu
-(mkandes@login.expanse.sdsc.edu) TOTP code for mkandes: XXXXXX
+(mkandes@login.expanse.sdsc.edu) TOTP code for mkandes: 522652
 Welcome to Bright release         9.0
 
                                                          Based on Rocky Linux 8
@@ -42,8 +42,28 @@ Use the following commands to adjust your environment:
 'module initadd <module>' - configure module to be loaded at every login
 
 -------------------------------------------------------------------------------
-Last login: Sun Apr 19 15:30:14 2026 from 216.15.51.171
+Last login: Mon Apr 20 12:49:26 2026 from 216.15.51.171
 [mkandes@login02 ~]$
+```
+
+Once you are logged into Expanse, create a working directory for the tutorial exercises.
+
+*Command*
+```
+mkdir -p complecs/
+```
+
+*Output*
+```
+[mkandes@login02 ~]$ mkdir -p complecs/
+[mkandes@login02 ~]$ cd complecs/
+[mkandes@login02 complecs]$ ls -lahtr
+total 308K
+drwxr-x--- 29 mkandes use300 46 Apr 20 12:53 ..
+drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
+[mkandes@login02 complecs]$ pwd
+/home/mkandes/complecs
+[mkandes@login02 complecs]$
 ```
 
 # Download and Extract Dataset
