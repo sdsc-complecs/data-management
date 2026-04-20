@@ -83,12 +83,12 @@ cd complecs/
 *Output*
 ```
 [mkandes@login02 ~]$ cd complecs/
+[mkandes@login02 complecs]$ pwd
+/home/mkandes/complecs
 [mkandes@login02 complecs]$ ls -lahtr
 total 308K
 drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
 drwxr-x--- 29 mkandes use300 46 Apr 20 15:28 ..
-[mkandes@login02 complecs]$ pwd
-/home/mkandes/complecs
 [mkandes@login02 complecs]$
 ```
 
