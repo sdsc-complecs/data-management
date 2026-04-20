@@ -46,7 +46,7 @@ Last login: Sun Apr 19 15:30:14 2026 from 216.15.51.171
 [mkandes@login02 ~]$
 ```
 
-# Download and Extract a Dataset
+# Download and Extract Dataset
 
 Once you are logged into Expanse, please go ahead and download the CIFAR-10 dataset using [wget](https://www.gnu.org/software/wget), a command-line program for retrieving files via HTTP, HTTPS, FTP and FTPS protocols.
 
