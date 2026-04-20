@@ -77,11 +77,10 @@ ls -lh
 
 *Output*
 ```
-[mkandes@login02 ~]$ ls -lh
-total 3.3G
--rw-r--r--   1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
-...
-[mkandes@login02 ~]$ 
+[mkandes_test@login02]~% ls -lh
+total 163M
+-rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
+[mkandes_test@login02]~%
 ```
 
 The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from the "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
