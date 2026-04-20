@@ -102,23 +102,22 @@ wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 ```
 
 *Output*
-```
-[mkandes_test@login02]~% wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
---2026-04-20 09:42:07--  https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+[mkandes@login02 complecs]$ wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+--2026-04-20 15:46:00--  https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 Resolving www.cs.toronto.edu (www.cs.toronto.edu)... 128.100.3.30
 Connecting to www.cs.toronto.edu (www.cs.toronto.edu)|128.100.3.30|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 170498071 (163M) [application/x-gzip]
 Saving to: ‘cifar-10-python.tar.gz’
 
-cifar-10-python.tar.gz           100%[==========================================================>] 162.60M  36.1MB/s    in 5.0s    
+cifar-10-python.tar.gz           100%[==========================================================>] 162.60M  36.8MB/s    in 4.9s    
 
-2026-04-20 09:42:13 (32.3 MB/s) - ‘cifar-10-python.tar.gz’ saved [170498071/170498071]
+2026-04-20 15:46:06 (33.2 MB/s) - ‘cifar-10-python.tar.gz’ saved [170498071/170498071]
 
-[mkandes_test@login02]~%
+[mkandes@login02 complecs]$
 ```
 
-After the download completes, go ahead and list the files in your HOME directory using the [`ls`](https://en.wikipedia.org/wiki/Ls) command to check out how much data we've downloaded.
+After the download completes, go ahead and list the files in your working directory using the `ls`command to check out how much data we've downloaded.
 
 *Command*
 ```
