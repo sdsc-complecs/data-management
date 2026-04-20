@@ -85,5 +85,13 @@ total 163M
 
 The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from the "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
 
+*Command*
 ```
+tar -xf cifar-10-python.tar.gz
+```
+
+*Output*
+```
+[mkandes_test@login02]~% tar -xf cifar-10-python.tar.gz
+[mkandes_test@login02]~%
 ```
