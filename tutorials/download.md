@@ -59,7 +59,7 @@ mkdir -p complecs/
 [mkandes@login02 ~]$
 ```
 
-Check that the directory was created by listing the contents of your `$HOME` directory with the [`ls`](https://en.wikipedia.org/wiki/Ls) command. 
+Check that the directory was created by listing the contents of your home directory with the [`ls`](https://en.wikipedia.org/wiki/Ls) command. 
 
 *Command*
 ```
