@@ -18,16 +18,24 @@ Proper data management is essential to make effective use of high-performance co
 
 ## Additional References
 
+- 
+- [SDSC Webinar: Data Management & File Systems (2023)](https://www.youtube.com/watch?v=husT8bcrpSI)
+- [Expanse Webinar: Data Management & File Systems on Expanse (2021)](https://www.youtube.com/watch?v=6mljCITo6Gk)
+
 # About COMPLECS
 
 COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure (COMPLECS) is a training program offered by the [San Diego Supercomputer Center (SDSC)](https://www.sdsc.edu) that covers
 the most important non-programming concepts and skills that you need to effectively use supercomputers. Topics include parallel computing concepts, Linux tools and bash scripting, security, batch and interactive
 computing, how to get help, and data management.
 
+<img src='https://www.sdsc.edu/_files/images/SDSC-logo.svg' alt='NSF Logo' width='250'/>
+
 # Acknowledgements
 
 This material is based upon work supported by the [U.S. National Science Foundation](https://www.nsf.gov) under [Award No. CISE/OAC-2320934](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2320934). Any opinions,
 findings, conclusions, or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the NSF.
+
+<img src='https://nsf.widen.net/content/josuwjrmy6/png/NSF_Official_logo_Med_Res_600ppi.png' alt='NSF Logo' width='250'/>
 
 # References:
 - https://www.hpc-carpentry.org
