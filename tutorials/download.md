@@ -111,3 +111,23 @@ drwxr-xr-x 2 mkandes_test ddp386   10 Jun  4  2009 cifar-10-batches-py
 -rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
 [mkandes_test@login02]~%
 ```
+
+*Command*
+```
+ls -lh cifar-10-batches-py/
+```
+
+*Output*
+```
+[mkandes_test@login02]~% ls -lh cifar-10-batches-py/
+total 177M
+-rw-r--r-- 1 mkandes_test ddp386 158 Mar 30  2009 batches.meta
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 data_batch_1
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 data_batch_2
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 data_batch_3
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 data_batch_4
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 data_batch_5
+-rw-r--r-- 1 mkandes_test ddp386  88 Jun  4  2009 readme.html
+-rw-r--r-- 1 mkandes_test ddp386 30M Mar 30  2009 test_batch
+[mkandes_test@login02]~%
+```
