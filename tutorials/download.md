@@ -1,6 +1,6 @@
 # CIFAR through the tubes: Downloading data from the internet
 
-<img src='https://docs.nlr.gov/docs/gen/fy26/98553.jpg' width='95%' height='55%'/>
+<img src='https://docs.nlr.gov/docs/gen/fy26/98553.jpg' width='50%' height='50%'/>
 
 [Image Credit: B. Roberts, NLR]([https://www.submarinecablemap.com/](https://research-hub.nlr.gov/en/publications/data-center-infrastructure-in-the-united-states-november-2025-2/))
 
