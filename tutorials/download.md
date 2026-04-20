@@ -240,5 +240,28 @@ cifar-10-python.tar.gz: OK
 [mkandes@login02 complecs]$
 ```
 
+Finally, let's also compute the SHA256 hash for the tarball as it is more commonly used today.
+
+*Command*
+```
+sha256sum cifar-10-python.tar.gz > cifar-10-python.tar.gz.sha256
+```
+
+*Output*
+```
+[mkandes@login02 complecs]$ sha256sum cifar-10-python.tar.gz > cifar-10-python.tar.gz.sha256
+[mkandes@login02 complecs]$ ls -lahtr
+total 164M
+drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
+-rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+drwxr-x--- 29 mkandes use300   46 Apr 20 15:28 ..
+-rw-r--r--  1 mkandes use300   57 Apr 20 15:59 cifar-10-python.tar.gz.md5
+drwxr-xr-x  3 mkandes use300    6 Apr 20  2026 .
+-rw-r--r--  1 mkandes use300   89 Apr 20  2026 cifar-10-python.tar.gz.sha256
+[mkandes@login02 complecs]$ cat cifar-10-python.tar.gz.sha256 
+6d958be074577803d12ecdefd02955f39262c83c16fe9348329d7fe0b5c001ce  cifar-10-python.tar.gz
+[mkandes@login02 complecs]$
+```
+
 
 [Back to Main Page](https://github.com/sdsc-complecs/data-management)
