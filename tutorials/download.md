@@ -179,4 +179,4 @@ cifar-10-python.tar.gz: OK
 ```
 
 
-[Back to Main Page](../README.md)
+[Back to Main Page](https://github.com/sdsc-complecs/data-management)
