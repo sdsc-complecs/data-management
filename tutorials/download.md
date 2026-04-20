@@ -193,9 +193,9 @@ md5sum cifar-10-python.tar.gz
 
 *Output*
 ```
-[mkandes_test@login02]~% md5sum cifar-10-python.tar.gz
+[mkandes@login02 complecs]$ md5sum cifar-10-python.tar.gz
 c58f30108f718f92721af3b95e74349a  cifar-10-python.tar.gz
-[mkandes_test@login02]~%
+[mkandes@login02 complecs]$
 ```
 
 Next, save the computed hash for the dataset as a file. 
