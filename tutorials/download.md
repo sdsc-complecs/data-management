@@ -102,6 +102,7 @@ wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 ```
 
 *Output*
+```
 [mkandes@login02 complecs]$ wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 --2026-04-20 15:46:00--  https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 Resolving www.cs.toronto.edu (www.cs.toronto.edu)... 128.100.3.30
@@ -121,15 +122,17 @@ After the download completes, go ahead and list the files in your working direct
 
 *Command*
 ```
-ls -lh
+ls -lahtr
 ```
 
 *Output*
 ```
-[mkandes_test@login02]~% ls -lh
+[mkandes@login02 complecs]$ ls -lahtr
 total 163M
--rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
-[mkandes_test@login02]~%
+-rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+drwxr-x--- 29 mkandes use300   46 Apr 20 15:28 ..
+drwxr-xr-x  2 mkandes use300    3 Apr 20 15:46 .
+[mkandes@login02 complecs]$ 
 ```
 
 The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from the "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
