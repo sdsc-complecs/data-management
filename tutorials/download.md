@@ -218,20 +218,24 @@ drwxr-xr-x  3 mkandes use300    5 Apr 20  2026 .
 [mkandes@login02 complecs]$
 ```
 
-Inspect the contents of the new md5 hash file with the [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) command. 
+Inspect the contents of the new md5 hash file with the [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) command. Does the hash match the value published by the creator of the dataset?
+
+[mkandes@login02 complecs]$ cat cifar-10-python.tar.gz.md5 
+c58f30108f718f92721af3b95e74349a  cifar-10-python.tar.gz
+[mkandes@login02 complecs]$
 
 Now, use the hash file to check the integrity of the dataset again. 
 
 *Command*
 ```
-md5sum -c cifar-10-python.md5
+md5sum -c cifar-10-python.tar.gz.md5 
 ```
 
 *Output*
 ```
-[mkandes_test@login02]~% md5sum -c cifar-10-python.md5
+[mkandes@login02 complecs]$ md5sum -c cifar-10-python.tar.gz.md5 
 cifar-10-python.tar.gz: OK
-[mkandes_test@login02]~%
+[mkandes@login02 complecs]$
 ```
 
 
