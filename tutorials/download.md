@@ -46,7 +46,7 @@ Last login: Mon Apr 20 12:49:26 2026 from 216.15.51.171
 [mkandes@login02 ~]$
 ```
 
-Once you are logged into Expanse, create a working directory for the tutorial exercises in your `$HOME` directory using the [`mkdir`](https://en.wikipedia.org/wiki/Mkdir) command.
+Once you are logged in, create a working directory for the tutorial exercises in your `$HOME` directory using the [`mkdir`](https://en.wikipedia.org/wiki/Mkdir) command.
 
 *Command*
 ```
@@ -56,19 +56,41 @@ mkdir -p complecs/
 *Output*
 ```
 [mkandes@login02 ~]$ mkdir -p complecs/
-[mkandes@login02 ~]$ cd complecs/
-[mkandes@login02 complecs]$ ls -lahtr
-total 308K
-drwxr-x--- 29 mkandes use300 46 Apr 20 12:53 ..
-drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
-[mkandes@login02 complecs]$ pwd
-/home/mkandes/complecs
-[mkandes@login02 complecs]$
+[mkandes@login02 ~]$
 ```
 
 Check that the directory was created by listing the contents of your `$HOME` directory with the [`ls`](https://en.wikipedia.org/wiki/Ls) command. 
 
-Then change your [`pwd`](https://en.wikipedia.org/wiki/Pwd) to the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)).
+*Command*
+```
+ls
+```
+
+*Output*
+```
+[mkandes@login02 ~]$ ls
+complecs  containers  data  projects  scripts  software
+[mkandes@login02 ~]$
+```
+
+Change your [`pwd`](https://en.wikipedia.org/wiki/Pwd) to the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)).
+
+*Command*
+```
+cd complecs/
+```
+
+*Output*
+```
+[mkandes@login02 ~]$ cd complecs/
+[mkandes@login02 complecs]$ ls -lahtr
+total 308K
+drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
+drwxr-x--- 29 mkandes use300 46 Apr 20 15:28 ..
+[mkandes@login02 complecs]$ pwd
+/home/mkandes/complecs
+[mkandes@login02 complecs]$
+```
 
 # Download a Tarball and Extract the Files
 
