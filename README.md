@@ -13,8 +13,6 @@
 
 ## Additional References:
 
-# Data Storage and Filesystems
-
 # About COMPLECS
 
 COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure (COMPLECS) is a CyberTraining program offered by the [San Diego Supercomputer Center (SDSC)](https://www.sdsc.edu) that covers
