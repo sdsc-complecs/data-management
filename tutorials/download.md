@@ -93,24 +93,14 @@ tar -xf cifar-10-python.tar.gz
 *Output*
 ```
 [mkandes_test@login02]~% tar -xf cifar-10-python.tar.gz
-[mkandes_test@login02]~%
-```
-
-With the data extracted from the tarball, let's check out what's inside.
-
-*Command*
-```
-ls -lh
-```
-
-*Output*
-```
 [mkandes_test@login02]~% ls -lh
 total 163M
 drwxr-xr-x 2 mkandes_test ddp386   10 Jun  4  2009 cifar-10-batches-py
 -rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
 [mkandes_test@login02]~%
 ```
+
+With the data extracted from the tarball to a directory, let's check out what's inside.
 
 *Command*
 ```
