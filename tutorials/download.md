@@ -127,3 +127,19 @@ total 177M
 ```
 
 What type of files are these? Let's check the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) website again. See [pickle](https://en.wikipedia.org/wiki/Serialization#Python). 
+
+## Check Data integrity
+
+How do we know the data we've downloaded from the internet is correct? How do we prove we all have the same data? Hash it. Let's start with the traditional [`md5sum`](https://en.wikipedia.org/wiki/Md5sum) command-line program. 
+
+*Command*
+```
+md5sum cifar-10-python.tar.gz
+```
+
+*Output*
+```
+[mkandes_test@login02]~% md5sum cifar-10-python.tar.gz
+c58f30108f718f92721af3b95e74349a  cifar-10-python.tar.gz
+[mkandes_test@login02]~%
+```
