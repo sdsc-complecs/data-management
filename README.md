@@ -11,7 +11,7 @@
 
 ## Tutorial Exercises
 
-## Additional References:
+## Additional References
 
 # About COMPLECS
 
