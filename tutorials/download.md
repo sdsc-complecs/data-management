@@ -218,7 +218,7 @@ drwxr-xr-x  3 mkandes use300    5 Apr 20  2026 .
 [mkandes@login02 complecs]$
 ```
 
-Inspect the contents of the new md5 hash file with the [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) command. Does the hash match the value published by the creator of the dataset?
+Inspect the contents of the new MD5 hash file with the [`cat`](https://en.wikipedia.org/wiki/Cat_(Unix)) command. Does the hash match the value published by the creator of the dataset?
 
 ```
 [mkandes@login02 complecs]$ cat cifar-10-python.tar.gz.md5 
