@@ -180,7 +180,7 @@ drwxr-xr-x 3 mkandes use300   4 Apr 20 15:49 ..
 
 What type of files are these? Let's check the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) website again. See [pickle](https://en.wikipedia.org/wiki/Serialization#Python). 
 
-## Check Data integrity
+## Check Data Integrity
 
 How do we know the data we've downloaded from the internet is correct? How do we prove we all have the same data? Hash it. Let's start with the traditional [`md5sum`](https://en.wikipedia.org/wiki/Md5sum) command-line program. 
 
