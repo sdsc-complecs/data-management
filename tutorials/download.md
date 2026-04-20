@@ -66,7 +66,9 @@ drwxr-xr-x  2 mkandes use300  2 Apr 20 12:53 .
 [mkandes@login02 complecs]$
 ```
 
-# Download and Extract Dataset
+Then change your [`pwd`](https://en.wikipedia.org/wiki/Pwd) to the new working directory using the [`cd`](https://en.wikipedia.org/wiki/Cd_(command)).
+
+# Download a Tarball and Extract its Files
 
 Once you are logged into Expanse, please go ahead and download the CIFAR-10 dataset using [wget](https://www.gnu.org/software/wget), a command-line program for retrieving files via HTTP, HTTPS, FTP and FTPS protocols.
 
