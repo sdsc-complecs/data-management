@@ -28,7 +28,7 @@ COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure 
 the most important non-programming concepts and skills that you need to effectively use supercomputers. Topics include parallel computing concepts, Linux tools and bash scripting, security, batch and interactive
 computing, how to get help, and data management.
 
-<img src='https://www.sdsc.edu/_files/images/SDSC-logo.svg' alt='NSF Logo' width='250'/>
+<img src='https://www.sdsc.edu/_files/images/SDSC-logo.svg' alt='SDSC Logo' width='500'/>
 
 # Acknowledgements
 
