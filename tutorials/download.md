@@ -135,7 +135,7 @@ drwxr-xr-x  2 mkandes use300    3 Apr 20 15:46 .
 [mkandes@login02 complecs]$ 
 ```
 
-The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from the "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
+The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from this "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
 
 *Command*
 ```
