@@ -95,3 +95,5 @@ tar -xf cifar-10-python.tar.gz
 [mkandes_test@login02]~% tar -xf cifar-10-python.tar.gz
 [mkandes_test@login02]~%
 ```
+
+With the data extracted from the tarball, let's check out what's inside.
