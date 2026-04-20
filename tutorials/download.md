@@ -8,7 +8,7 @@ The aim of this tutorial is to introduce you to command-line tools that are usef
 
 ## Login and Setup a Working Directory
 
-Let's get started by logging into Expanse with your account either directly via `ssh` or through the [Expanse User Portal](https://portal.expanse.sdsc.edu)
+Login into Expanse with your account either directly via `ssh` or through the [Expanse User Portal](https://portal.expanse.sdsc.edu)
 
 *Command*
 ```
