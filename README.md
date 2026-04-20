@@ -10,6 +10,16 @@
 
 # Data Storage and Filesystems
 
+# About COMPLECS
+
+COMPLECS (COMPrehensive Learning for end-users to Effectively utilize
+CyberinfraStructure) is a CyberTraining program offered by the 
+[San Diego Supercomputer Center (SDSC)](https://www.sdsc.edu) that covers
+the most important non-programming concepts and skills that you need to
+effectively use supercomputers. Topics include parallel computing concepts,
+Linux tools and bash scripting, security, batch and interactive computing,
+how to get help, and data management.
+
 # Acknowledgements
 
 This material is based upon work supported by the [U.S. National Science Foundation](https://www.nsf.gov)
