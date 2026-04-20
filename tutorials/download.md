@@ -46,7 +46,7 @@ Last login: Mon Apr 20 12:49:26 2026 from 216.15.51.171
 [mkandes@login02 ~]$
 ```
 
-Once you are logged into Expanse, create a working directory for the tutorial exercises.
+Once you are logged into Expanse, create a working directory for the tutorial exercises in your `$HOME` directory using the [`mkdir`](https://en.wikipedia.org/wiki/Mkdir) command.
 
 *Command*
 ```
