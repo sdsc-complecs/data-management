@@ -24,7 +24,7 @@ Proper data management is essential to make effective use of high-performance co
 
 # About COMPLECS
 
-COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure [(COMPLECS)](https://www.sdsc.edu/education/training-programs/COMPLECS.html) is a training program offered by the San Diego 
+COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure ([COMPLECS](https://www.sdsc.edu/education/training-programs/COMPLECS.html)) is a training program offered by the San Diego 
 Supercomputer Center that covers the most important non-programming concepts and skills that you need to effectively use supercomputers. Topics include parallel computing concepts, Linux tools and bash 
 scripting, security, batch and interactive computing, how to get help, and data management.
 
