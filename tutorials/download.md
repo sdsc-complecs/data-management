@@ -122,4 +122,4 @@ total 177M
 [mkandes_test@login02]~%
 ```
 
-What type of files are these? Let's check the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) website again. See [Pickle](https://en.wikipedia.org/wiki/Serialization#Python). 
+What type of files are these? Let's check the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) website again. See [pickle](https://en.wikipedia.org/wiki/Serialization#Python). 
