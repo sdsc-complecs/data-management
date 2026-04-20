@@ -4,7 +4,7 @@
 
 [Image Credit: Malcom, wiki.lustre.org](https://wiki.lustre.org)
 
-The aim of this tutorial is to teach you about the advantages and limitations of different [filesystems](https://en.wikipedia.org/wiki/File_system) that you'll typically find available to you on a high-performance computing system.
+The aim of this tutorial is to teach you about the advantages and limitations of different [filesystems](https://en.wikipedia.org/wiki/File_system) that you'll typically find available on a high-performance computing system.
 
 ## Login and Navigate to Your Working Directory
 
