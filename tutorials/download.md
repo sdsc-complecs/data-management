@@ -67,3 +67,19 @@ cifar-10-python.tar.gz           100%[==========================================
 
 [mkandes@login02 ~]$
 ```
+
+After the download completes, go ahead and list the files in your HOME directory using the [`ls`](https://en.wikipedia.org/wiki/Ls) command to check out how much data we've downloaded.
+
+*Command*
+```
+ls -lh
+```
+
+*Output*
+```
+[mkandes@login02 ~]$ ls -lh
+total 3.3G
+-rw-r--r--   1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+...
+[mkandes@login02 ~]$ 
+```
