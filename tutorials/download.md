@@ -135,7 +135,7 @@ drwxr-xr-x  2 mkandes use300    3 Apr 20 15:46 .
 [mkandes@login02 complecs]$ 
 ```
 
-The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from this "tarball", use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
+The dataset we've downloaded has been delieved to us as a [`gzip`](https://en.wikipedia.org/wiki/Gzip)-compressed `tar` file. To extract the dataset from this *tarball*, use the [`tar`](https://en.wikipedia.org/wiki/Tar_(computing)) command.
 
 *Command*
 ```
@@ -144,12 +144,14 @@ tar -xf cifar-10-python.tar.gz
 
 *Output*
 ```
-[mkandes_test@login02]~% tar -xf cifar-10-python.tar.gz
-[mkandes_test@login02]~% ls -lh
-total 163M
-drwxr-xr-x 2 mkandes_test ddp386   10 Jun  4  2009 cifar-10-batches-py
--rw-r--r-- 1 mkandes_test ddp386 163M Jun  4  2009 cifar-10-python.tar.gz
-[mkandes_test@login02]~%
+[mkandes@login02 complecs]$ tar -xf cifar-10-python.tar.gz 
+[mkandes@login02 complecs]$ ls -lahtr
+total 164M
+drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
+-rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+drwxr-x--- 29 mkandes use300   46 Apr 20 15:28 ..
+drwxr-xr-x  3 mkandes use300    4 Apr 20 15:49 .
+[mkandes@login02 complecs]$
 ```
 
 With the data extracted from the tarball to a directory, let's check out what's inside.
