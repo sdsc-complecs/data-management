@@ -159,9 +159,9 @@ start-interactive
 
 *Output*
 ```
-[mkandes@login02 complecs]$ start-interactive 
-srun: job 48267285 queued and waiting for resources
-srun: job 48267285 has been allocated resources
+[mkandes@login02 complecs]$ start-interactive
+srun: job 48282497 queued and waiting for resources
+srun: job 48282497 has been allocated resources
 [mkandes@exp-9-55 complecs]$
 ```
 
@@ -175,13 +175,13 @@ cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
 *Output*
 ```
 [mkandes@exp-9-55 complecs]$ cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
-[mkandes@exp-9-55 job_48267623]$ pwd
-/scratch/mkandes/job_48267623
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr
+[mkandes@exp-9-55 job_48282497]$ pwd
+/scratch/mkandes/job_48282497
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr
 total 8.0K
-drwxr-xr-x 3 root    root 4.0K Apr 20 19:21 ..
-drwx------ 2 mkandes root 4.0K Apr 20 19:22 .
-[mkandes@exp-9-55 job_48267623]$
+drwxr-xr-x 3 root    root 4.0K Apr 21 06:49 ..
+drwx------ 2 mkandes root 4.0K Apr 21 06:49 .
+[mkandes@exp-9-55 job_48282497]$
 ```
 
 Now, try and clone the dataset here. What do you observe?
@@ -193,43 +193,70 @@ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+[mkandes@exp-9-55 job_48282497]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
 Cloning into 'CIFAR-10-images'...
 remote: Enumerating objects: 60027, done.
 remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
-Receiving objects: 100% (60027/60027), 19.94 MiB | 40.76 MiB/s, done.
+Receiving objects: 100% (60027/60027), 19.94 MiB | 42.45 MiB/s, done.
 Resolving deltas: 100% (59990/59990), done.
-real 2.22
+real 2.26
 user 0.67
-sys 0.97
-[mkandes@exp-9-55 job_48267623]$
+sys 0.96
+[mkandes@exp-9-55 job_48282497]$
 ```
 
-Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory?
+Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory? Hint: What type of underlying filesystems are in use? You can check basic filesystem information with the [`df`](https://en.wikipedia.org/wiki/Df_(Unix)) command. Start by running the `df` command on the `/scratch` directory.
+
+*Command*
+```
+df -Th /scratch
+```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ df -Th /scratch
+[mkandes@exp-9-55 job_48282497]$ df -Th /scratch/
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1p1 ext4  916G  268M  869G   1% /scratch
-[mkandes@exp-9-55 job_48267623]$
+[mkandes@exp-9-55 job_48282497]$
+```
+
+We see here that the `/scratch` directory is located on an [NVMe](https://en.wikipedia.org/wiki/NVM_Express) drive using the [`ext4`](https://en.wikipedia.org/wiki/Ext4) filesystem. Next try running the `df` command on the `/home` directory, which is where we created our working directory for the tutorial exercices.  
+
+*Command*
+```
+df -Th /home
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ df -Th /home
+[mkandes@exp-9-55 job_48282497]$ df -Th /home
 Filesystem     Type    Size  Used Avail Use% Mounted on
 /etc/auto.home autofs     0     0     0    - /home
-[mkandes@exp-9-55 job_48267623]$
+[mkandes@exp-9-55 job_48282497]$
+```
+
+What is going on here? Let's try and be more specific.
+
+*Command*
+```
+df -Th "/home/${USER}"
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ df -Th /home
-Filesystem     Type    Size  Used Avail Use% Mounted on
-/etc/auto.home autofs     0     0     0    - /home
-[mkandes@exp-9-55 job_48267623]$
+[mkandes@exp-9-55 job_48282497]$ df -Th "/home/${USER}"
+Filesystem                        Type  Size  Used Avail Use% Mounted on
+10.22.100.112:/pool2/home/mkandes nfs   212T   37T  176T  18% /home/mkandes
+[mkandes@exp-9-55 job_48282497]$
 ```
+
+Your `/home` directory is [automounted](https://en.wikipedia.org/wiki/Automounter)! It's being served from a [Network File System (NFS)](https://en.wikipedia.org/wiki/Network_File_System).
+
+So, to answer the question from above: Q: Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory? A: Downloading the data to the `/scratch` directory used the **local** `/scratch` disk on the compute node, while downloading the data to our working directory in `/home` utilizeed the NFS filesystem, which is a [**distributed**](https://en.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems), network filesystem. 
+
+-  A local [file system](https://en.wikipedia.org/wiki/File_system) is a capability of an operating system that services the applications running on the same computer.[
+-  A [distributed file system](https://en.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems) is a protocol that provides file access between networked computers.
+
 
 ## Zip the Dataset and Copy It Back
 
