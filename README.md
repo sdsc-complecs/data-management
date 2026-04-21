@@ -37,7 +37,7 @@ findings, conclusions, or recommendations expressed in this material are those o
 
 <img src='https://nsf.widen.net/content/josuwjrmy6/png/NSF_Official_logo_Med_Res_600ppi.png' alt='NSF Logo' width='250'/>
 
-<! ---
+<!--
 - https://www.hpc-carpentry.org
 - https://ubuntu.com/tutorials
 - https://www.digitalocean.com/community/tutorials
@@ -68,4 +68,4 @@ findings, conclusions, or recommendations expressed in this material are those o
 - https://www.globus.org/blog/use-test-endpoints-anticipate-your-data-transfer-rates
 - https://fasterdata.es.net/data-transfer-tools/globus/
 - https://fasterdata.es.net/performance-testing/DTNs/
---- >
+-->
