@@ -207,6 +207,30 @@ sys 0.97
 
 Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory?
 
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ df -Th /scratch
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1 ext4  916G  268M  869G   1% /scratch
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ df -Th /home
+Filesystem     Type    Size  Used Avail Use% Mounted on
+/etc/auto.home autofs     0     0     0    - /home
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ df -Th /home
+Filesystem     Type    Size  Used Avail Use% Mounted on
+/etc/auto.home autofs     0     0     0    - /home
+[mkandes@exp-9-55 job_48267623]$
+```
+
 ## Zip the Dataset and Copy It Back
 
 Let's take a quick look at the dataset. 
