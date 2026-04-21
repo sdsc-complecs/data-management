@@ -24,7 +24,7 @@ Proper data management is essential to make effective use of high-performance co
 - [SDSC Webinar: Data Management & File Systems (2023)](https://www.youtube.com/watch?v=husT8bcrpSI)
 - [Expanse Webinar: Data Management & File Systems on Expanse (2021)](https://www.youtube.com/watch?v=6mljCITo6Gk)
 
-# About COMPLECS
+## About COMPLECS
 
 COMPrehensive Learning for end-users to Effectively utilize CyberinfraStructure ([COMPLECS](https://www.sdsc.edu/education/training-programs/COMPLECS.html)) is a training program offered by the
 [San Diego Supercomputer Center](https://www.sdsc.edu) that covers the most important non-programming concepts and skills that you need to effectively use supercomputers. Topics include parallel
