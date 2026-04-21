@@ -183,3 +183,26 @@ drwxr-xr-x 3 root    root 4.0K Apr 20 18:51 ..
 drwx------ 2 mkandes root 4.0K Apr 20 18:53 .
 [mkandes@exp-9-55 job_48267285]$
 ```
+
+Now, try and clone the dataset here. What do you observe?
+
+*Command*
+```
+time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267285]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+Cloning into 'CIFAR-10-images'...
+remote: Enumerating objects: 60027, done.
+remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
+Receiving objects: 100% (60027/60027), 19.94 MiB | 35.14 MiB/s, done.
+Resolving deltas: 100% (59990/59990), done.
+real 2.29
+user 0.66
+sys 0.98
+[mkandes@exp-9-55 job_48267285]$
+```
+
+Wow! Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory?
