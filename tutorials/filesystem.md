@@ -136,7 +136,7 @@ Why does it take so much time?
 
 ## Clone the Dataset to Your Scratch Directory
 
-Before we answer the question above, let's try and clone the dataset to an alternative location on Expanse. To make your life simpler, define the following [`alias`](https://en.wikipedia.org/wiki/Alias_(command)) command to start an interactive session on one of Expanse's compute nodes. 
+Before we answer the question above, let's try to clone the dataset to an alternative location on Expanse. To make your life simpler, define the following [`alias`](https://en.wikipedia.org/wiki/Alias_(command)) command to start an interactive session on one of Expanse's compute nodes. 
 
 *Command*
 ```
