@@ -110,7 +110,7 @@ and retry with 'git restore --source=HEAD :/'
 [mkandes@login02 complecs]$
 ```
 
-Unfortunately, it'll take far too long for all of us to download this version of the dataset. How long?  Well, here is one measurement using the [`time`](https://en.wikipedia.org/wiki/Time_(Unix)) command.
+Unfortunately, it'll take far too long for all of us to download this version of the dataset to our home directories. How long?  Well, here is one measurement using the [`time`](https://en.wikipedia.org/wiki/Time_(Unix)) command.
 
 *Command*
 ```
