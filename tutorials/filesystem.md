@@ -145,7 +145,7 @@ alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --nta
 
 *Output*
 ```
-[mkandes@login02 complecs]$ alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+[mkandes@login02 complecs]$ alias start-interactive='srun --partition=debug --account=sdp157 --reservation=complecs --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 [mkandes@login02 complecs]$
 ```
 
