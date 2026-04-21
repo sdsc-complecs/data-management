@@ -354,5 +354,12 @@ drwxr-xr-x  4 mkandes use300    8 Apr 20 19:34 .
 -rw-r--r--  1 mkandes use300  78M Apr 20 19:34 CIFAR-10-images.zip
 [mkandes@exp-9-55 job_48267623]$
 ```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ exit
+exit
+[mkandes@login02 complecs]$
+```
 # 
 [Back to Main Page](https://github.com/sdsc-complecs/data-management)
