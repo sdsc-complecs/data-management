@@ -136,9 +136,15 @@ Why does it take so much time?
 
 ## Clone the Dataset to Your Scratch Directory
 
-Before we answer the question above, let's try and clone the dataset to an alternative location on Expanse. To make your life simpler, first append the following alias command to your ~/.bashrc file.
+Before we answer the question above, let's try and clone the dataset to an alternative location on Expanse. To make your life simpler, set the following alias command to start an interactive session on one of Expanse's compute nodes. 
 
 *Command*
 ```
 alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+```
+
+*Output*
+```
+[mkandes@login02 complecs]$ alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+[mkandes@login02 complecs]$
 ```
