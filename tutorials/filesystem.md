@@ -296,5 +296,63 @@ drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 ..
 [mkandes@exp-9-55 job_48267623]$
 ```
 
+*Command*
+```
+zip -r CIFAR-10-images.zip CIFAR-10-images/
+```
+
+*Output*
+```
+
+  adding: CIFAR-10-images/ (stored 0%)
+  adding: CIFAR-10-images/.git/ (stored 0%)
+  adding: CIFAR-10-images/.git/packed-refs (deflated 10%)
+  adding: CIFAR-10-images/.git/logs/ (stored 0%)
+  adding: CIFAR-10-images/.git/logs/HEAD (deflated 24%)
+  adding: CIFAR-10-images/.git/logs/refs/ (stored 0%)
+  adding: CIFAR-10-images/.git/logs/refs/remotes/ (stored 0%)
+  adding: CIFAR-10-images/.git/logs/refs/remotes/origin/ (stored 0%)
+  adding: CIFAR-10-images/.git/logs/refs/remotes/origin/HEAD (deflated 24%)
+  adding: CIFAR-10-images/.git/logs/refs/heads/ (stored 0%)
+  adding: CIFAR-10-images/.git/logs/refs/heads/master (deflated 24%)
+...
+adding: CIFAR-10-images/test/bird/0558.jpg (deflated 20%)
+  adding: CIFAR-10-images/test/bird/0671.jpg (deflated 18%)
+  adding: CIFAR-10-images/test/bird/0483.jpg (deflated 18%)
+  adding: CIFAR-10-images/test/bird/0463.jpg (deflated 20%)
+  adding: CIFAR-10-images/test/bird/0166.jpg (deflated 21%)
+  adding: CIFAR-10-images/test/bird/0127.jpg (deflated 20%)
+  adding: CIFAR-10-images/test/bird/0258.jpg (deflated 20%)
+  adding: CIFAR-10-images/test/bird/0203.jpg (deflated 18%)
+  adding: CIFAR-10-images/test/bird/0204.jpg (deflated 22%)
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr
+total 78M
+drwxr-xr-x 3 root    root   4.0K Apr 20 19:21 ..
+drwxr-xr-x 5 mkandes use300 4.0K Apr 20 19:23 CIFAR-10-images
+-rw-r--r-- 1 mkandes use300  78M Apr 20 19:32 CIFAR-10-images.zip
+drwx------ 3 mkandes root   4.0K Apr 20 19:32 .
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ cp CIFAR-10-images.zip ${HOME}/complecs/
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr ${HOME}/complecs/
+total 211M
+drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
+-rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
+-rw-r--r--  1 mkandes use300   57 Apr 20 15:59 cifar-10-python.tar.gz.md5
+-rw-r--r--  1 mkandes use300   89 Apr 20 16:04 cifar-10-python.tar.gz.sha256
+drwxr-xr-x  5 mkandes use300    6 Apr 20 16:37 CIFAR-10-images
+drwxr-x--- 29 mkandes use300   46 Apr 20 16:53 ..
+drwxr-xr-x  4 mkandes use300    8 Apr 20 19:34 .
+-rw-r--r--  1 mkandes use300  78M Apr 20 19:34 CIFAR-10-images.zip
+[mkandes@exp-9-55 job_48267623]$
+```
 # 
 [Back to Main Page](https://github.com/sdsc-complecs/data-management)
