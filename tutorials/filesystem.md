@@ -119,6 +119,17 @@ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
 
 *Output*
 ```
+[mkandes@login02 complecs]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+Cloning into 'CIFAR-10-images'...
+remote: Enumerating objects: 60027, done.
+remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
+Receiving objects: 100% (60027/60027), 19.94 MiB | 30.39 MiB/s, done.
+Resolving deltas: 100% (59990/59990), done.
+Updating files: 100% (60001/60001), done.
+real 2222.33
+user 1.73
+sys 5.69
+[mkandes@login02 complecs]$
 ```
 
 Why does it take so much time?
