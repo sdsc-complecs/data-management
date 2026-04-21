@@ -140,12 +140,12 @@ Before we answer the question above, let's try to clone the dataset to an altern
 
 *Command*
 ```
-alias start-interactive='srun --partition=debug --account=sdp157 --reservation=complecs --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+alias start-interactive='srun --partition=shared --account=sdp157 --reservation=complecs --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 ```
 
 *Output*
 ```
-[mkandes@login02 complecs]$ alias start-interactive='srun --partition=debug --account=sdp157 --reservation=complecs --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+[mkandes@login02 complecs]$ alias start-interactive='srun --partition=shared --account=sdp157 --reservation=complecs --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 [mkandes@login02 complecs]$
 ```
 
