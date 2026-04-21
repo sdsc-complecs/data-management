@@ -148,3 +148,19 @@ alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --nta
 [mkandes@login02 complecs]$ alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 [mkandes@login02 complecs]$
 ```
+
+Then start an interactive session.
+
+*Command*
+
+```
+start-interactive
+```
+
+*Output*
+```
+[mkandes@login02 complecs]$ start-interactive 
+srun: job 48267285 queued and waiting for resources
+srun: job 48267285 has been allocated resources
+[mkandes@exp-9-55 complecs]$
+```
