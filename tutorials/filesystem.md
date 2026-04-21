@@ -164,3 +164,22 @@ srun: job 48267285 queued and waiting for resources
 srun: job 48267285 has been allocated resources
 [mkandes@exp-9-55 complecs]$
 ```
+
+Once your interactive session starts, navigate to your `/scratch` working directory. 
+
+*Command*
+```
+cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
+```
+
+*Output*
+```
+[mkandes@exp-9-55 complecs]$ cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
+[mkandes@exp-9-55 job_48267285]$ pwd
+/scratch/mkandes/job_48267285
+[mkandes@exp-9-55 job_48267285]$ ls -lahtr
+total 8.0K
+drwxr-xr-x 3 root    root 4.0K Apr 20 18:51 ..
+drwx------ 2 mkandes root 4.0K Apr 20 18:53 .
+[mkandes@exp-9-55 job_48267285]$
+```
