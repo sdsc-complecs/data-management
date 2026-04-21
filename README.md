@@ -9,7 +9,7 @@ Proper data management is essential to make effective use of high-performance co
 ## Presentation Slides
 
 - [Data Transfer](https://drive.google.com/file/d/1zIe-3jDnuBlCZtFjE1USsC1kWGYheUO5/view?usp=drive_link)
-- [Data Storage and Filesystem](https://drive.google.com/file/d/1cs7Cvvcb_InfLvNWD0KdXI-q-cMZWp6N/view?usp=drive_link)
+- [Data Storage and Filesystems](https://drive.google.com/file/d/1cs7Cvvcb_InfLvNWD0KdXI-q-cMZWp6N/view?usp=drive_link)
 
 ## Tutorials
 
