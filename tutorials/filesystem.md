@@ -252,27 +252,40 @@ Filesystem                        Type  Size  Used Avail Use% Mounted on
 
 Your `/home` directory is [automounted](https://en.wikipedia.org/wiki/Automounter)! It's being served from a [Network File System (NFS)](https://en.wikipedia.org/wiki/Network_File_System).
 
-So, to answer the question from above: Q: Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory? A: Downloading the data to the `/scratch` directory used the **local** `/scratch` disk on the compute node, while downloading the data to our working directory in `/home` utilizeed the NFS filesystem, which is a [**distributed**](https://en.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems), network filesystem. 
+So, to answer the question from above: Q: Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory? A: Downloading the data to the `/scratch` directory used the **local** `/scratch` disk on the compute node, while downloading the data to our working directory in `/home` utilizeed the NFS filesystem, which is a **distributed** network filesystem. 
 
 -  A local [file system](https://en.wikipedia.org/wiki/File_system) is a capability of an operating system that services the applications running on the same computer.[
 -  A [distributed file system](https://en.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems) is a protocol that provides file access between networked computers.
 
+But still, why the difference in performance? 
 
-## Zip the Dataset and Copy It Back
+## Inspect the dataset
 
 Let's take a quick look at the dataset. 
 
+*Command*
+```
+ls -lahtr CIFAR-10-images/
+```
+
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr CIFAR-10-images/
 total 24K
--rw-r--r--  1 mkandes use300   95 Apr 20 19:23 README.md
-drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 test
-drwxr-xr-x  5 mkandes use300 4.0K Apr 20 19:23 .
-drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 train
-drwxr-xr-x  8 mkandes use300 4.0K Apr 20 19:23 .git
-drwx------  3 mkandes root   4.0K Apr 20 19:24 ..
-[mkandes@exp-9-55 job_48267623]$
+-rw-r--r--  1 mkandes use300   95 Apr 21 06:50 README.md
+drwxr-xr-x 12 mkandes use300 4.0K Apr 21 06:50 test
+drwxr-xr-x  5 mkandes use300 4.0K Apr 21 06:50 .
+drwxr-xr-x 12 mkandes use300 4.0K Apr 21 06:50 train
+drwxr-xr-x  8 mkandes use300 4.0K Apr 21 06:50 .git
+drwx------  3 mkandes root   4.0K Apr 21 06:59 ..
+[mkandes@exp-9-55 job_48282497]$
+```
+
+Okay, we see both a `train` and `test` dataset directory. Let's inspect a little further. 
+
+*Command*
+```
+ls -lahtr CIFAR-10-images/train
 ```
 
 *Output*
@@ -294,34 +307,60 @@ drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 truck
 [mkandes@exp-9-55 job_48267623]$
 ```
 
-*Output*
+Ah. Each dataset directory has category-level directories for the different images. And ... 
+
+*Command*
 ```
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/train/airplane/
-total 20M
--rw-r--r--  1 mkandes use300  920 Apr 20 19:23 0044.jpg
--rw-r--r--  1 mkandes use300  844 Apr 20 19:23 0043.jpg
--rw-r--r--  1 mkandes use300  941 Apr 20 19:23 0042.jpg
--rw-r--r--  1 mkandes use300  913 Apr 20 19:23 0041.jpg
--rw-r--r--  1 mkandes use300  890 Apr 20 19:23 0040.jpg
-...
--rw-r--r--  1 mkandes use300  936 Apr 20 19:23 4951.jpg
--rw-r--r--  1 mkandes use300  930 Apr 20 19:23 4950.jpg
--rw-r--r--  1 mkandes use300  897 Apr 20 19:23 4949.jpg
--rw-r--r--  1 mkandes use300  948 Apr 20 19:23 4948.jpg
--rw-r--r--  1 mkandes use300  828 Apr 20 19:23 4947.jpg
--rw-r--r--  1 mkandes use300  877 Apr 20 19:23 4946.jpg
--rw-r--r--  1 mkandes use300  869 Apr 20 19:23 4945.jpg
-drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 .
-drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 ..
-[mkandes@exp-9-55 job_48267623]$
+ls -lahtr CIFAR-10-images/train/airplane/
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/train/airplane/ | wc -l
-5003
-[mkandes@exp-9-55 job_48267623]$
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr CIFAR-10-images/train/airplane/
+total 20M
+-rw-r--r--  1 mkandes use300  873 Apr 21 06:50 0067.jpg
+-rw-r--r--  1 mkandes use300  784 Apr 21 06:50 0066.jpg
+-rw-r--r--  1 mkandes use300  887 Apr 21 06:50 0065.jpg
+...
+-rw-r--r--  1 mkandes use300  828 Apr 21 06:50 4947.jpg
+-rw-r--r--  1 mkandes use300  877 Apr 21 06:50 4946.jpg
+-rw-r--r--  1 mkandes use300  869 Apr 21 06:50 4945.jpg
+drwxr-xr-x  2 mkandes use300 120K Apr 21 06:50 .
+drwxr-xr-x 12 mkandes use300 4.0K Apr 21 06:50 ..
+[mkandes@exp-9-55 job_48282497]$
 ```
+
+... each category directory holds a lot of raw `*.jpg` images. How many? Use the [`wc`](https://en.wikipedia.org/wiki/Wc_(Unix)) command to get a quick count.
+
+*Command*
+```
+ls -lahtr CIFAR-10-images/train/airplane/ | wc -l
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr CIFAR-10-images/train/airplane/ | wc -l
+5003
+[mkandes@exp-9-55 job_48282497]$
+```
+
+*Command*
+```
+ls -lahtr CIFAR-10-images/test/airplane/ | wc -l
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr CIFAR-10-images/test/airplane/ | wc -l
+1003
+[mkandes@exp-9-55 job_48282497]$
+```
+
+Multiplying by 10 category-level directories, we see that the dataset has approximately 60K raw `*.jpg* image files. Is that a lot? Hint: Think about how much [metadata](https://en.wikipedia.org/wiki/Metadata) may be associated with a large number of files. 
+
+## Zip the Dataset and Copy It Back
+
+Before we close out this interactive session, let's [`zip`](https://www.geeksforgeeks.org/linux-unix/zip-command-in-linux-with-examples) up the dataset directory and copy it back to our working directory.
 
 *Command*
 ```
@@ -330,46 +369,47 @@ zip -r CIFAR-10-images.zip CIFAR-10-images/
 
 *Output*
 ```
-
+[mkandes@exp-9-55 job_48282497]$ zip -r CIFAR-10-images.zip CIFAR-10-images/
   adding: CIFAR-10-images/ (stored 0%)
   adding: CIFAR-10-images/.git/ (stored 0%)
   adding: CIFAR-10-images/.git/packed-refs (deflated 10%)
   adding: CIFAR-10-images/.git/logs/ (stored 0%)
-  adding: CIFAR-10-images/.git/logs/HEAD (deflated 24%)
-  adding: CIFAR-10-images/.git/logs/refs/ (stored 0%)
-  adding: CIFAR-10-images/.git/logs/refs/remotes/ (stored 0%)
-  adding: CIFAR-10-images/.git/logs/refs/remotes/origin/ (stored 0%)
-  adding: CIFAR-10-images/.git/logs/refs/remotes/origin/HEAD (deflated 24%)
-  adding: CIFAR-10-images/.git/logs/refs/heads/ (stored 0%)
-  adding: CIFAR-10-images/.git/logs/refs/heads/master (deflated 24%)
 ...
-adding: CIFAR-10-images/test/bird/0558.jpg (deflated 20%)
-  adding: CIFAR-10-images/test/bird/0671.jpg (deflated 18%)
-  adding: CIFAR-10-images/test/bird/0483.jpg (deflated 18%)
-  adding: CIFAR-10-images/test/bird/0463.jpg (deflated 20%)
-  adding: CIFAR-10-images/test/bird/0166.jpg (deflated 21%)
-  adding: CIFAR-10-images/test/bird/0127.jpg (deflated 20%)
   adding: CIFAR-10-images/test/bird/0258.jpg (deflated 20%)
   adding: CIFAR-10-images/test/bird/0203.jpg (deflated 18%)
   adding: CIFAR-10-images/test/bird/0204.jpg (deflated 22%)
-[mkandes@exp-9-55 job_48267623]$
+[mkandes@exp-9-55 job_48282497]$
+```
+
+Check that the zip archive file was created successfully.
+
+*Command* 
+```
+ls -lahtr
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr
 total 78M
-drwxr-xr-x 3 root    root   4.0K Apr 20 19:21 ..
-drwxr-xr-x 5 mkandes use300 4.0K Apr 20 19:23 CIFAR-10-images
--rw-r--r-- 1 mkandes use300  78M Apr 20 19:32 CIFAR-10-images.zip
-drwx------ 3 mkandes root   4.0K Apr 20 19:32 .
-[mkandes@exp-9-55 job_48267623]$
+drwxr-xr-x 3 root    root   4.0K Apr 21 07:21 ..
+drwxr-xr-x 5 mkandes use300 4.0K Apr 21 07:21 CIFAR-10-images
+-rw-r--r-- 1 mkandes use300  78M Apr 21 07:31 CIFAR-10-images.zip
+drwx------ 3 mkandes root   4.0K Apr 21 07:31 .
+[mkandes@exp-9-55 job_48282497]$
+```
+
+And now [`cp`]() it back to your working directory.
+
+*Command*
+```
+cp CIFAR-10-images.zip ${HOME}/complecs/
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ cp CIFAR-10-images.zip ${HOME}/complecs/
-[mkandes@exp-9-55 job_48267623]$ ls -lahtr ${HOME}/complecs/
+[mkandes@exp-9-55 job_48282497]$ cp CIFAR-10-images.zip ${HOME}/complecs/
+[mkandes@exp-9-55 job_48282497]$ ls -lahtr ${HOME}/complecs/
 total 211M
 drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
 -rw-r--r--  1 mkandes use300 163M Jun  4  2009 cifar-10-python.tar.gz
@@ -377,14 +417,21 @@ drwxr-xr-x  2 mkandes use300   10 Jun  4  2009 cifar-10-batches-py
 -rw-r--r--  1 mkandes use300   89 Apr 20 16:04 cifar-10-python.tar.gz.sha256
 drwxr-xr-x  5 mkandes use300    6 Apr 20 16:37 CIFAR-10-images
 drwxr-x--- 29 mkandes use300   46 Apr 20 16:53 ..
-drwxr-xr-x  4 mkandes use300    8 Apr 20 19:34 .
--rw-r--r--  1 mkandes use300  78M Apr 20 19:34 CIFAR-10-images.zip
-[mkandes@exp-9-55 job_48267623]$
+drwxr-xr-x  4 mkandes use300    8 Apr 21  2026 .
+-rw-r--r--  1 mkandes use300  78M Apr 21  2026 CIFAR-10-images.zip
+[mkandes@exp-9-55 job_48282497]$
+```
+
+Now that we have a copy of the dataset in our zip archive, we can close our interactive session with the [`exit`](https://en.wikipedia.org/wiki/Exit_(command)) command.
+
+*Command*
+```
+exit
 ```
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267623]$ exit
+[mkandes@exp-9-55 job_48282497]$ exit
 exit
 [mkandes@login02 complecs]$
 ```
