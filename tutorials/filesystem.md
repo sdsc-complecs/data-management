@@ -140,5 +140,5 @@ Before we answer the question above, let's try and clone the dataset to an alter
 
 *Command*
 ```
-alias start-interactive='srun --partition=shared --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
+alias start-interactive='srun --partition=debug --account=sdp157 --nodes=1 --ntasks-per-node=1 --cpus-per-task=2 --mem=4G --time=00:30:00 --pty --wait=0 /bin/bash'
 ```
