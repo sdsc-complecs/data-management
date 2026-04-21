@@ -175,13 +175,13 @@ cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
 *Output*
 ```
 [mkandes@exp-9-55 complecs]$ cd "/scratch/${USER}/job_${SLURM_JOB_ID}"
-[mkandes@exp-9-55 job_48267285]$ pwd
-/scratch/mkandes/job_48267285
-[mkandes@exp-9-55 job_48267285]$ ls -lahtr
+[mkandes@exp-9-55 job_48267623]$ pwd
+/scratch/mkandes/job_48267623
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr
 total 8.0K
-drwxr-xr-x 3 root    root 4.0K Apr 20 18:51 ..
-drwx------ 2 mkandes root 4.0K Apr 20 18:53 .
-[mkandes@exp-9-55 job_48267285]$
+drwxr-xr-x 3 root    root 4.0K Apr 20 19:21 ..
+drwx------ 2 mkandes root 4.0K Apr 20 19:22 .
+[mkandes@exp-9-55 job_48267623]$
 ```
 
 Now, try and clone the dataset here. What do you observe?
@@ -193,20 +193,84 @@ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48267285]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
+[mkandes@exp-9-55 job_48267623]$ time -p git clone https://github.com/YoongiKim/CIFAR-10-images.git
 Cloning into 'CIFAR-10-images'...
 remote: Enumerating objects: 60027, done.
 remote: Total 60027 (delta 0), reused 0 (delta 0), pack-reused 60027 (from 1)
-Receiving objects: 100% (60027/60027), 19.94 MiB | 35.14 MiB/s, done.
+Receiving objects: 100% (60027/60027), 19.94 MiB | 40.76 MiB/s, done.
 Resolving deltas: 100% (59990/59990), done.
-real 2.29
-user 0.66
-sys 0.98
-[mkandes@exp-9-55 job_48267285]$
+real 2.22
+user 0.67
+sys 0.97
+[mkandes@exp-9-55 job_48267623]$
 ```
 
-Wow! Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory?
+Why is there such a large difference in the time to download the same dataset when the only thing we've changed is the target directory?
 
+## Zip the Dataset and Copy It Back
+
+Let's take a quick look at the dataset. 
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/
+total 24K
+-rw-r--r--  1 mkandes use300   95 Apr 20 19:23 README.md
+drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 test
+drwxr-xr-x  5 mkandes use300 4.0K Apr 20 19:23 .
+drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 train
+drwxr-xr-x  8 mkandes use300 4.0K Apr 20 19:23 .git
+drwx------  3 mkandes root   4.0K Apr 20 19:24 ..
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/train/
+total 1.2M
+drwxr-xr-x  5 mkandes use300 4.0K Apr 20 19:23 ..
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 airplane
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 automobile
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 bird
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 cat
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 deer
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 dog
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 frog
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 horse
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 ship
+drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 .
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 truck
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/train/airplane/
+total 20M
+-rw-r--r--  1 mkandes use300  920 Apr 20 19:23 0044.jpg
+-rw-r--r--  1 mkandes use300  844 Apr 20 19:23 0043.jpg
+-rw-r--r--  1 mkandes use300  941 Apr 20 19:23 0042.jpg
+-rw-r--r--  1 mkandes use300  913 Apr 20 19:23 0041.jpg
+-rw-r--r--  1 mkandes use300  890 Apr 20 19:23 0040.jpg
+...
+-rw-r--r--  1 mkandes use300  936 Apr 20 19:23 4951.jpg
+-rw-r--r--  1 mkandes use300  930 Apr 20 19:23 4950.jpg
+-rw-r--r--  1 mkandes use300  897 Apr 20 19:23 4949.jpg
+-rw-r--r--  1 mkandes use300  948 Apr 20 19:23 4948.jpg
+-rw-r--r--  1 mkandes use300  828 Apr 20 19:23 4947.jpg
+-rw-r--r--  1 mkandes use300  877 Apr 20 19:23 4946.jpg
+-rw-r--r--  1 mkandes use300  869 Apr 20 19:23 4945.jpg
+drwxr-xr-x  2 mkandes use300 120K Apr 20 19:23 .
+drwxr-xr-x 12 mkandes use300 4.0K Apr 20 19:23 ..
+[mkandes@exp-9-55 job_48267623]$
+```
+
+*Output*
+```
+[mkandes@exp-9-55 job_48267623]$ ls -lahtr CIFAR-10-images/train/airplane/ | wc -l
+5003
+[mkandes@exp-9-55 job_48267623]$
+```
 
 # 
 [Back to Main Page](https://github.com/sdsc-complecs/data-management)
