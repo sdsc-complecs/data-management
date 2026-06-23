@@ -98,7 +98,7 @@ Download the CIFAR-10 dataset using [wget](https://en.wikipedia.org/wiki/Wget), 
 
 *Command*  
 ```
-wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+wget https://js2.jetstream-cloud.org:8001/swift/v1/sdsc-public/datasets/cifar/10/cifar-10-python.tar.gz
 ```
 
 *Output*
