@@ -419,9 +419,9 @@ exit
 
 *Output*
 ```
-[mkandes@exp-9-55 job_48282497]$ exit
+[mkandes@exp-1-23 job_52929778]$ exit
 exit
-[mkandes@login02 complecs]$
+[mkandes@login01 ~]$
 ```
 # 
 [Back to Main Page](https://github.com/sdsc-complecs/data-management)
